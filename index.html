@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#IkeMide26 — Tee Design Lookbook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Italianno&family=Jost:wght@300;400;500&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../palette/tokens.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --page-pad: 72px;
+      --col-gap: 32px;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: #FAFAF7;
+      color: var(--espresso);
+      overflow-x: hidden;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* HERO                                                 */
+    /* ─────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(
+        135deg,
+        #E2F0D6 0%,
+        #F4F9EF 25%,
+        #FFF5F7 60%,
+        #FDE8EE 100%
+      );
+      padding: 100px var(--page-pad);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative background sparkles */
+    .hero::before {
+      content: '✦';
+      position: absolute;
+      top: 12%;
+      left: 8%;
+      font-size: 28px;
+      color: #C9A84C;
+      opacity: 0.35;
+    }
+
+    .hero::after {
+      content: '✦';
+      position: absolute;
+      bottom: 18%;
+      right: 10%;
+      font-size: 20px;
+      color: #E8A0B4;
+      opacity: 0.5;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #7BA05B;
+      margin-bottom: 28px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(52px, 8vw, 108px);
+      font-weight: 900;
+      color: #4A6741;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    .hero-script {
+      font-family: 'Italianno', cursive;
+      font-size: clamp(36px, 5vw, 72px);
+      color: #C27A8E;
+      margin-bottom: 36px;
+      display: block;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: #7BA05B;
+      max-width: 520px;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-nav {
+      margin-top: 64px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 40px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #4A6741;
+      color: #FDF8F0;
+    }
+
+    .btn-primary:hover { background: #3D2B1F; }
+
+    .btn-outline {
+      border: 2px solid #4A6741;
+      color: #4A6741;
+    }
+
+    .btn-outline:hover { background: #E2F0D6; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* SECTIONS                                             */
+    /* ─────────────────────────────────────────────────── */
+    section { padding: 80px var(--page-pad); }
+    section + section { padding-top: 0; }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #D4C5A9;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: #4A6741;
+      margin-bottom: 48px;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* COLOR PALETTE STRIP                                  */
+    /* ─────────────────────────────────────────────────── */
+    .palette-section { background: white; }
+
+    .swatch-row {
+      display: flex;
+      gap: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(61,43,31,0.08);
+      margin-bottom: 24px;
+    }
+
+    .swatch {
+      flex: 1;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 12px;
+      cursor: default;
+      transition: flex 0.2s ease;
+    }
+
+    .swatch:hover { flex: 1.5; }
+
+    .swatch-label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .swatch:hover .swatch-label { opacity: 1; }
+
+    .swatch-hex {
+      font-size: 10px;
+      font-weight: 300;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .swatch:hover .swatch-hex { opacity: 0.7; }
+
+    .swatch-name-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .swatch-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chip-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid rgba(61,43,31,0.1);
+      flex-shrink: 0;
+    }
+
+    .chip-text { font-size: 12px; font-weight: 300; color: #D4C5A9; }
+    .chip-text strong { font-weight: 500; color: #7BA05B; }
+
+    /* ─────────────────────────────────────────────────── */
+    /* TYPOGRAPHY SPECIMEN                                  */
+    /* ─────────────────────────────────────────────────── */
+    .type-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 36px;
+    }
+
+    .type-card {
+      padding: 36px 32px;
+      background: white;
+      border-radius: 16px;
+      border: 1px solid #E2F0D6;
+    }
+
+    .type-role {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4C5A9;
+      margin-bottom: 14px;
+    }
+
+    .type-sample-playfair {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
+      font-weight: 900;
+      color: #4A6741;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .type-sample-italianno {
+      font-family: 'Italianno', cursive;
+      font-size: 52px;
+      color: #C27A8E;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .type-sample-jost {
+      font-family: 'Jost', sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      letter-spacing: 0.12em;
+      color: #3D2B1F;
+      margin-bottom: 12px;
+    }
+
+    .type-sample-abril {
+      font-family: 'Abril Fatface', Georgia, serif;
+      font-size: 38px;
+      color: #7BA05B;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .type-meta {
+      font-size: 11px;
+      font-weight: 300;
+      color: #D4C5A9;
+      letter-spacing: 0.08em;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* CONCEPT SECTIONS                                     */
+    /* ─────────────────────────────────────────────────── */
+    .concept-row {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 72px;
+      padding-bottom: 72px;
+      border-bottom: 1px solid #E2F0D6;
+    }
+
+    .concept-row:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .concept-info {}
+
+    .concept-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4C5A9;
+      margin-bottom: 12px;
+    }
+
+    .concept-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 30px;
+      font-weight: 900;
+      color: #4A6741;
+      margin-bottom: 16px;
+    }
+
+    .concept-desc {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: #7BA05B;
+      margin-bottom: 28px;
+    }
+
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      padding: 5px 14px;
+      border-radius: 20px;
+      background: #E2F0D6;
+      color: #4A6741;
+    }
+
+    .tag.pink { background: #FDE8EE; color: #C27A8E; }
+    .tag.gold  { background: #FDF8F0; color: #C9A84C; border: 1px solid #E8C547; }
+
+    .concept-mockup-row {
+      display: flex;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .concept-thumb {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .thumb-garment {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumb-garment svg { display: block; filter: drop-shadow(0 6px 18px rgba(61,43,31,0.09)); }
+    .thumb-garment img {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .thumb-label {
+      font-size: 10px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #D4C5A9;
+      text-align: center;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* ALL MOCKUPS GRID                                     */
+    /* ─────────────────────────────────────────────────── */
+    .all-mockups {
+      background: white;
+      padding: 80px var(--page-pad);
+    }
+
+    .mockups-full-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 28px;
+    }
+
+    .thumb-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .thumb-card-inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .thumb-card:hover .thumb-card-inner { transform: scale(1.03); }
+
+    .thumb-card-inner svg { display: block; }
+    .thumb-card-inner img {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    .thumb-card-label {
+      text-align: center;
+    }
+
+    .thumb-card-label .tc-concept {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: #4A6741;
+      margin-bottom: 2px;
+    }
+
+    .thumb-card-label .tc-colorway {
+      display: block;
+      font-size: 10px;
+      font-weight: 300;
+      color: #D4C5A9;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* garment links row */
+    .garment-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .garment-link-card {
+      flex: 1;
+      min-width: 200px;
+      padding: 28px 32px;
+      background: var(--matcha-pale);
+      border-radius: 16px;
+      text-decoration: none;
+      transition: background 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .garment-link-card:hover { background: var(--matcha-light); }
+    .garment-link-card:nth-child(2) { background: var(--blush-pale); }
+    .garment-link-card:nth-child(2):hover { background: var(--blush-light); }
+    .garment-link-card:nth-child(3) { background: var(--blush-cream); }
+    .garment-link-card:nth-child(3):hover { background: var(--blush-pale); }
+
+    .glc-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: #4A6741;
+    }
+
+    .glc-sub {
+      font-size: 13px;
+      font-weight: 300;
+      color: #7BA05B;
+    }
+
+    .glc-arrow {
+      font-size: 18px;
+      color: #B6D89C;
+      margin-top: 8px;
+    }
+
+    /* ─────────────────────────────────────────────────── */
+    /* FOOTER                                               */
+    /* ─────────────────────────────────────────────────── */
+    footer {
+      padding: 48px var(--page-pad);
+      border-top: 1px solid #E2F0D6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 900;
+      color: #4A6741;
+    }
+
+    .footer-sub {
+      font-size: 12px;
+      font-weight: 300;
+      color: #D4C5A9;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      font-weight: 300;
+      color: #D4C5A9;
+      letter-spacing: 0.08em;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- HERO                                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="hero">
+  <p class="hero-eyebrow">Pre-Wedding Slumber Party · 2026</p>
+  <h1 class="hero-title">#IkeMide26</h1>
+  <span class="hero-script">The Perfect Matcha</span>
+  <p class="hero-desc">A complete graphic tee design system — 4 concepts, 3 colorways, and role variants for every member of the squad.</p>
+  <nav class="hero-nav">
+    <a href="tank-top.html" class="btn-primary">Tank Top Mockups</a>
+    <a href="crewneck.html" class="btn-outline">Crewneck Mockups</a>
+    <a href="pajama-set.html" class="btn-outline">PJ Set Mockups</a>
+  </nav>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- PALETTE STRIP                                            -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="palette-section">
+  <div class="section-eyebrow">Color System</div>
+  <div class="section-title">The Palette</div>
+
+  <!-- Matcha greens -->
+  <div class="swatch-row">
+    <div class="swatch" style="background:#4A6741;color:#FDF8F0">
+      <span class="swatch-label">Matcha Deep</span>
+      <span class="swatch-hex">#4A6741</span>
+    </div>
+    <div class="swatch" style="background:#7BA05B;color:#FDF8F0">
+      <span class="swatch-label">Matcha Mid</span>
+      <span class="swatch-hex">#7BA05B</span>
+    </div>
+    <div class="swatch" style="background:#B6D89C;color:#3D2B1F">
+      <span class="swatch-label">Matcha Light</span>
+      <span class="swatch-hex">#B6D89C</span>
+    </div>
+    <div class="swatch" style="background:#E2F0D6;color:#3D2B1F">
+      <span class="swatch-label">Matcha Pale</span>
+      <span class="swatch-hex">#E2F0D6</span>
+    </div>
+    <div class="swatch" style="background:#F4F9EF;color:#3D2B1F">
+      <span class="swatch-label">Matcha Cream</span>
+      <span class="swatch-hex">#F4F9EF</span>
+    </div>
+    <div class="swatch" style="background:#C27A8E;color:#FDF8F0">
+      <span class="swatch-label">Blush Deep</span>
+      <span class="swatch-hex">#C27A8E</span>
+    </div>
+    <div class="swatch" style="background:#E8A0B4;color:#FDF8F0">
+      <span class="swatch-label">Blush Mid</span>
+      <span class="swatch-hex">#E8A0B4</span>
+    </div>
+    <div class="swatch" style="background:#F5CDD8;color:#3D2B1F">
+      <span class="swatch-label">Blush Light</span>
+      <span class="swatch-hex">#F5CDD8</span>
+    </div>
+    <div class="swatch" style="background:#FDE8EE;color:#3D2B1F">
+      <span class="swatch-label">Blush Pale</span>
+      <span class="swatch-hex">#FDE8EE</span>
+    </div>
+    <div class="swatch" style="background:#FDF8F0;color:#3D2B1F;border:1px solid #E2F0D6">
+      <span class="swatch-label">Cream</span>
+      <span class="swatch-hex">#FDF8F0</span>
+    </div>
+    <div class="swatch" style="background:#D4C5A9;color:#3D2B1F">
+      <span class="swatch-label">Latte</span>
+      <span class="swatch-hex">#D4C5A9</span>
+    </div>
+    <div class="swatch" style="background:#3D2B1F;color:#FDF8F0">
+      <span class="swatch-label">Espresso</span>
+      <span class="swatch-hex">#3D2B1F</span>
+    </div>
+    <div class="swatch" style="background:#C9A84C;color:#FDF8F0">
+      <span class="swatch-label">Gold Leaf</span>
+      <span class="swatch-hex">#C9A84C</span>
+    </div>
+  </div>
+
+  <div style="margin-top:16px">
+    <div class="section-eyebrow">Three Colorways</div>
+    <div class="swatch-name-row" style="margin-top:12px">
+      <div class="swatch-chip">
+        <div class="chip-color" style="background:#4A6741"></div>
+        <span class="chip-text"><strong>Matcha Classic</strong> — Cream garment · Matcha Deep + Blush Mid</span>
+      </div>
+      <div class="swatch-chip">
+        <div class="chip-color" style="background:#3D2B1F"></div>
+        <span class="chip-text"><strong>Sage &amp; Rose</strong> — Matcha Pale garment · Espresso + Blush Deep</span>
+      </div>
+      <div class="swatch-chip">
+        <div class="chip-color" style="background:#7BA05B"></div>
+        <span class="chip-text"><strong>Pink Cloud</strong> — Blush Pale garment · Matcha Mid + Gold Leaf</span>
+      </div>
+      <div class="swatch-chip">
+        <div class="chip-color" style="background:#B6D89C"></div>
+        <span class="chip-text"><strong>Midnight Matcha</strong> (B &amp; C) — Espresso garment · Matcha Light + Blush Light</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TYPOGRAPHY SPECIMEN                                      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-eyebrow">Type System</div>
+  <div class="section-title">Typography</div>
+
+  <div class="type-grid">
+    <div class="type-card">
+      <div class="type-role">Display · Hashtag</div>
+      <div class="type-sample-playfair">#IkeMide26</div>
+      <div class="type-meta">Playfair Display 900 · Concepts A, B</div>
+    </div>
+    <div class="type-card">
+      <div class="type-role">Script · Tagline</div>
+      <div class="type-sample-italianno">The Perfect Matcha</div>
+      <div class="type-meta">Italianno 400 · Concept A</div>
+    </div>
+    <div class="type-card">
+      <div class="type-role">Body · Labels · Supporting</div>
+      <div class="type-sample-jost">slumber party ✦ 2026</div>
+      <div class="type-meta">Jost 300 · Concepts B, C, D</div>
+    </div>
+    <div class="type-card">
+      <div class="type-role">Alt Display · Bubble</div>
+      <div class="type-sample-abril">#IkeMide</div>
+      <div class="type-meta">Abril Fatface · Concept D</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- CONCEPT SECTIONS                                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section>
+  <div class="section-eyebrow">Design Concepts</div>
+  <div class="section-title">The Four Concepts</div>
+
+  <!-- Hidden SVG symbols for garment outlines in concept previews -->
+  <svg style="display:none">
+    <symbol id="mini-tank" viewBox="0 0 500 660">
+      <path d="M 0,210 C 0,130 28,55 118,0 L 198,0 Q 215,28 232,56 Q 248,80 250,90 Q 252,80 268,56 Q 285,28 302,0 L 382,0 C 472,55 500,130 500,210 L 500,630 Q 500,652 478,652 L 22,652 Q 0,652 0,630 Z"
+        fill="var(--garment-color, #FDF8F0)" stroke="#D4C5A9" stroke-width="3"/>
+    </symbol>
+    <symbol id="mini-crew" viewBox="0 0 700 760">
+      <path d="M 280,30 Q 270,0 200,0 L 0,90 Q 0,120 10,140 L 90,240 Q 140,240 160,220 L 160,740 Q 160,760 180,760 L 520,760 Q 540,760 540,740 L 540,220 Q 560,240 610,240 L 690,140 Q 700,120 700,90 L 500,0 Q 430,0 420,30 Q 400,80 350,95 Q 300,80 280,30 Z"
+        fill="var(--garment-color, #FDF8F0)" stroke="#C8B898" stroke-width="3"/>
+    </symbol>
+  </svg>
+
+  <!-- Concept A -->
+  <div class="concept-row">
+    <div class="concept-info">
+      <div class="concept-number">Concept A</div>
+      <div class="concept-name">The Perfect Matcha<br>Coquette Illustration</div>
+      <p class="concept-desc">Soft, illustrated, romantic. A matcha latte cup with latte-art heart, cherry blossom accents, ribbon bows, and the flowing Italianno script tagline. Etsy-bachelorette energy meets coquette Pinterest.</p>
+      <div class="concept-tags">
+        <span class="tag">Illustrated</span>
+        <span class="tag">Coquette</span>
+        <span class="tag pink">Bridal</span>
+        <span class="tag">Tank Top</span>
+        <span class="tag">Crewneck</span>
+        <span class="tag">PJ Set</span>
+      </div>
+    </div>
+    <div class="concept-mockup-row">
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:20%;width:68%;pointer-events:none" src="../svg/ikemide26-a-matcha-classic.svg" alt="">
+        </div>
+        <span class="thumb-label">Matcha Classic</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#E2F0D6">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:20%;width:68%;pointer-events:none" src="../svg/ikemide26-a-sage-rose.svg" alt="">
+        </div>
+        <span class="thumb-label">Sage &amp; Rose</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDE8EE">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:20%;width:68%;pointer-events:none" src="../svg/ikemide26-a-pink-cloud.svg" alt="">
+        </div>
+        <span class="thumb-label">Pink Cloud</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="130" height="172" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:20%;width:68%;pointer-events:none" src="../svg/ikemide26-a-matcha-classic-bride.svg" alt="">
+        </div>
+        <span class="thumb-label">BRIDE ♡ variant</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concept B -->
+  <div class="concept-row">
+    <div class="concept-info">
+      <div class="concept-number">Concept B</div>
+      <div class="concept-name">Typographic Lockup<br>Bold &amp; Modern</div>
+      <p class="concept-desc">Instagram-ready, hashtag-forward, high contrast. Stacked (B1) or arched (B2) layout. The tee that reads across a room in a group photo. Available in dark Midnight Matcha for a premium dark garment.</p>
+      <div class="concept-tags">
+        <span class="tag">Typographic</span>
+        <span class="tag">Bold</span>
+        <span class="tag">Stacked</span>
+        <span class="tag">Arched</span>
+        <span class="tag gold">Midnight Matcha</span>
+      </div>
+    </div>
+    <div class="concept-mockup-row">
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:14%;width:72%;pointer-events:none" src="../svg/ikemide26-b-matcha-classic.svg" alt="">
+        </div>
+        <span class="thumb-label">Matcha Classic</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#E2F0D6">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:14%;width:72%;pointer-events:none" src="../svg/ikemide26-b-sage-rose.svg" alt="">
+        </div>
+        <span class="thumb-label">Sage &amp; Rose</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#3D2B1F">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:14%;width:72%;pointer-events:none" src="../svg/ikemide26-b-midnight-matcha.svg" alt="">
+        </div>
+        <span class="thumb-label">Midnight Matcha</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#3D2B1F">
+          <svg width="130" height="172" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:14%;width:72%;pointer-events:none" src="../svg/ikemide26-b-midnight-matcha-bride.svg" alt="">
+        </div>
+        <span class="thumb-label">BRIDE ♡ — Midnight</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concept C -->
+  <div class="concept-row">
+    <div class="concept-info">
+      <div class="concept-number">Concept C</div>
+      <div class="concept-name">Minimal Mark<br>Clean &amp; Elevated</div>
+      <p class="concept-desc">The understated one. Small chest placement. Looks expensive. The one the bride wears the morning after. A geometric matcha cup icon and tracked-wide hashtag — nothing more. White space is the design.</p>
+      <div class="concept-tags">
+        <span class="tag">Minimal</span>
+        <span class="tag">Left Chest</span>
+        <span class="tag pink">Bridal</span>
+        <span class="tag gold">Midnight Matcha</span>
+        <span class="tag">PJ Set</span>
+      </div>
+    </div>
+    <div class="concept-mockup-row">
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:22%;width:55%;pointer-events:none" src="../svg/ikemide26-c-matcha-classic.svg" alt="">
+        </div>
+        <span class="thumb-label">Matcha Classic</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDE8EE">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:22%;width:55%;pointer-events:none" src="../svg/ikemide26-c-pink-cloud.svg" alt="">
+        </div>
+        <span class="thumb-label">Pink Cloud</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#3D2B1F">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:22%;width:55%;pointer-events:none" src="../svg/ikemide26-c-midnight-matcha.svg" alt="">
+        </div>
+        <span class="thumb-label">Midnight Matcha</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="130" height="172" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:22%;width:55%;pointer-events:none" src="../svg/ikemide26-c-matcha-classic-bride.svg" alt="">
+        </div>
+        <span class="thumb-label">BRIDE ♡ variant</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Concept D -->
+  <div class="concept-row">
+    <div class="concept-info">
+      <div class="concept-number">Concept D</div>
+      <div class="concept-name">Matcha Party<br>Playful / Kawaii</div>
+      <p class="concept-desc">Fun, colorful, slumber-party energy. Bubble-letter hashtag, a row of kawaii sticker icons (matcha latte, mochi, ice cream, sleeping mask, pillow + slippers), and playful scatter accents. This is the tank top and PJ set design.</p>
+      <div class="concept-tags">
+        <span class="tag">Kawaii</span>
+        <span class="tag">Illustrated</span>
+        <span class="tag pink">Playful</span>
+        <span class="tag">Tank Top</span>
+        <span class="tag">PJ Set</span>
+      </div>
+    </div>
+    <div class="concept-mockup-row">
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDF8F0">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:10%;width:78%;pointer-events:none" src="../svg/ikemide26-d-matcha-classic.svg" alt="">
+        </div>
+        <span class="thumb-label">Matcha Classic</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#E2F0D6">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:10%;width:78%;pointer-events:none" src="../svg/ikemide26-d-sage-rose.svg" alt="">
+        </div>
+        <span class="thumb-label">Sage &amp; Rose</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDE8EE">
+          <svg width="150" height="198" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:10%;width:78%;pointer-events:none" src="../svg/ikemide26-d-pink-cloud.svg" alt="">
+        </div>
+        <span class="thumb-label">Pink Cloud</span>
+      </div>
+      <div class="concept-thumb">
+        <div class="thumb-garment" style="--garment-color:#FDE8EE">
+          <svg width="130" height="172" viewBox="0 0 500 660"><use href="#mini-tank"/></svg>
+          <img style="position:absolute;top:10%;width:78%;pointer-events:none" src="../svg/ikemide26-d-pink-cloud-bride.svg" alt="">
+        </div>
+        <span class="thumb-label">BRIDE ♡ — Pink Cloud</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- GARMENT PAGE LINKS                                       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section style="padding-top:0">
+  <div class="section-eyebrow">Browse By Garment</div>
+  <div class="garment-links">
+    <a href="tank-top.html" class="garment-link-card">
+      <div class="glc-title">Tank Top</div>
+      <div class="glc-sub">All concepts × all colorways on the tank silhouette</div>
+      <div class="glc-arrow">→</div>
+    </a>
+    <a href="crewneck.html" class="garment-link-card">
+      <div class="glc-title">Oversized Crewneck</div>
+      <div class="glc-sub">Front print + left chest placements, including Midnight Matcha dark variants</div>
+      <div class="glc-arrow">→</div>
+    </a>
+    <a href="pajama-set.html" class="garment-link-card">
+      <div class="glc-title">Pajama Set</div>
+      <div class="glc-sub">Button-up top + shorts, BRIDE &amp; SQUAD role variants</div>
+      <div class="glc-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FOOTER                                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div>
+    <div class="footer-brand">#IkeMide26</div>
+    <div class="footer-sub">Graphic Tee Design System · Pre-Wedding Slumber Party</div>
+  </div>
+  <div class="footer-note">
+    Matcha Coquette · Y2K Softness · Bridal Warmth<br>
+    4 concepts · 3 colorways · 14 base files · 28 role variants
+  </div>
+</footer>
+
+</body>
+</html>

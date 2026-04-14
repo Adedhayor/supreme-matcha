@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#IkeMide26 — Tank Top Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Italianno&family=Jost:wght@300;400;500&family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../palette/tokens.css">
+  <link rel="stylesheet" href="assets/garment-shapes.css">
+</head>
+<body>
+
+<header class="page-header">
+  <h1>#IkeMide26</h1>
+  <span class="sub">Tank Top Mockups</span>
+  <a href="index.html" class="back-link">← Lookbook</a>
+</header>
+
+<!-- ── Tank Top SVG (reusable inline template via JS clone) ── -->
+<svg style="display:none">
+  <symbol id="tank-top" viewBox="0 0 500 660">
+    <defs>
+      <filter id="fabric-texture">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+        <feBlend in="SourceGraphic" in2="gray" mode="multiply" result="blend"/>
+        <feComponentTransfer in="blend">
+          <feFuncR type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncG type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncB type="linear" slope="0.97" intercept="0.03"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <!-- Tank top silhouette path -->
+    <!-- Body: full width 0-500, y=200 to y=640 -->
+    <!-- Straps: left (x=100–200) and right (x=300–400), y=0 to y=200 -->
+    <!-- Neckline: scooped from inner strap edges -->
+    <!-- Armholes: curved from body sides up to strap outer edges -->
+    <path class="garment-fill" d="
+      M 0,210
+      C 0,130 28,55 118,0
+      L 198,0
+      Q 215,28 232,56
+      Q 248,80 250,90
+      Q 252,80 268,56
+      Q 285,28 302,0
+      L 382,0
+      C 472,55 500,130 500,210
+      L 500,630
+      Q 500,652 478,652
+      L 22,652
+      Q 0,652 0,630
+      Z
+    " fill="var(--garment-color, #FDF8F0)" stroke="#D4C5A9" stroke-width="2.5" filter="url(#fabric-texture)"/>
+    <!-- Rib-band at neckline -->
+    <path class="neckline-rib" d="
+      M 198,0
+      Q 215,28 232,56
+      Q 248,80 250,90
+      Q 252,80 268,56
+      Q 285,28 302,0
+    " fill="none" stroke="#C8B898" stroke-width="10" stroke-linecap="round" opacity="0.35"/>
+    <!-- Armhole seam hints -->
+    <path d="M 118,0 C 28,55 0,130 0,210" fill="none" stroke="#C8B898" stroke-width="4" opacity="0.25"/>
+    <path d="M 382,0 C 472,55 500,130 500,210" fill="none" stroke="#C8B898" stroke-width="4" opacity="0.25"/>
+  </symbol>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 1: Concept A — The Perfect Matcha (Coquette)       -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Concept A — The Perfect Matcha (Coquette Illustration)</div>
+  <div class="mockup-grid">
+
+    <!-- A / Matcha Classic / Cream garment -->
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-matcha-classic.svg" alt="Concept A — Matcha Classic">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <!-- A / Sage & Rose / Matcha-Pale garment -->
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#E2F0D6">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-sage-rose.svg" alt="Concept A — Sage & Rose">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette</span>
+        <span class="colorway-name">Sage &amp; Rose · Matcha Pale</span>
+      </div>
+    </div>
+
+    <!-- A / Pink Cloud / Blush-Pale garment -->
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-pink-cloud.svg" alt="Concept A — Pink Cloud">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+    <!-- A / Matcha Classic / BRIDE variant -->
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-matcha-classic-bride.svg" alt="Concept A — Bride">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette · BRIDE ♡</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <!-- A / Pink Cloud / SQUAD variant -->
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-pink-cloud-squad.svg" alt="Concept A — Squad">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette · MATCHA SQUAD</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 2: Concept B — Typographic Lockup                  -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Concept B — Typographic Lockup (Bold &amp; Modern)</div>
+  <div class="mockup-grid">
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-matcha-classic.svg" alt="Concept B — Matcha Classic">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">B — Typographic</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#E2F0D6">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-sage-rose.svg" alt="Concept B — Sage & Rose">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">B — Typographic</span>
+        <span class="colorway-name">Sage &amp; Rose · Matcha Pale</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-pink-cloud.svg" alt="Concept B — Pink Cloud">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">B — Typographic</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-matcha-classic-bride.svg" alt="Concept B — Bride">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">B — Typographic · BRIDE ♡</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 3: Concept D — Matcha Party (Tank / PJ energy)     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Concept D — Matcha Party (Playful / Kawaii) — Best on Tank</div>
+  <div class="mockup-grid">
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-d-matcha-classic.svg" alt="Concept D — Matcha Classic">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#E2F0D6">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-d-sage-rose.svg" alt="Concept D — Sage & Rose">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party</span>
+        <span class="colorway-name">Sage &amp; Rose · Matcha Pale</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-d-pink-cloud.svg" alt="Concept D — Pink Cloud">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap tank" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="260" height="343" viewBox="0 0 500 660"><use href="#tank-top"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-d-pink-cloud-bride.svg" alt="Concept D — Bride">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party · BRIDE ♡</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

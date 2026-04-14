@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#IkeMide26 — Pajama Set Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../palette/tokens.css">
+  <link rel="stylesheet" href="assets/garment-shapes.css">
+  <style>
+    /* PJ set-specific: show top + shorts side by side */
+    .pj-set-wrap {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .pj-piece {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pj-piece .design-overlay {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    /* PJ top: small left-chest placement */
+    .pj-piece.top .design-overlay {
+      top: 16%;
+      left: 16%;
+      width: 32%;
+    }
+
+    /* PJ shorts: small icon on left leg */
+    .pj-piece.shorts .design-overlay {
+      top: 15%;
+      left: 14%;
+      width: 38%;
+    }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>#IkeMide26</h1>
+  <span class="sub">Pajama Set Mockups</span>
+  <a href="index.html" class="back-link">← Lookbook</a>
+</header>
+
+<!-- ── PJ Top SVG Symbol ── -->
+<svg style="display:none">
+  <symbol id="pj-top" viewBox="0 0 500 600">
+    <defs>
+      <filter id="pj-texture">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+        <feBlend in="SourceGraphic" in2="gray" mode="multiply"/>
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncG type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncB type="linear" slope="0.97" intercept="0.03"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <!-- PJ Button-up top silhouette -->
+    <!-- Front notched collar, short sleeves, buttons down center -->
+    <path d="
+      M 180,0
+      Q 160,0 120,0
+      L 0,80
+      Q 0,100 10,120
+      L 60,200
+      Q 90,200 110,180
+      L 110,580
+      Q 110,600 130,600
+      L 370,600
+      Q 390,600 390,580
+      L 390,180
+      Q 410,200 440,200
+      L 490,120
+      Q 500,100 500,80
+      L 380,0
+      Q 340,0 320,0
+      L 300,20
+      Q 280,50 250,60
+      Q 220,50 200,20
+      Z
+    " fill="var(--garment-color, #FDF8F0)" stroke="#C8B898" stroke-width="2.5" filter="url(#pj-texture)"/>
+
+    <!-- Notched collar left -->
+    <path d="M 180,0 L 200,20 Q 220,50 250,60" fill="none" stroke="#C8B898" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+    <!-- Notched collar right -->
+    <path d="M 320,0 L 300,20 Q 280,50 250,60" fill="none" stroke="#C8B898" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+
+    <!-- Center button placket -->
+    <line x1="250" y1="60" x2="250" y2="600" stroke="#C8B898" stroke-width="2" stroke-dasharray="1,0" opacity="0.3"/>
+
+    <!-- 5 Buttons -->
+    <circle cx="250" cy="120" r="6" fill="none" stroke="#C8B898" stroke-width="2.5" opacity="0.5"/>
+    <circle cx="250" cy="200" r="6" fill="none" stroke="#C8B898" stroke-width="2.5" opacity="0.5"/>
+    <circle cx="250" cy="290" r="6" fill="none" stroke="#C8B898" stroke-width="2.5" opacity="0.5"/>
+    <circle cx="250" cy="380" r="6" fill="none" stroke="#C8B898" stroke-width="2.5" opacity="0.5"/>
+    <circle cx="250" cy="470" r="6" fill="none" stroke="#C8B898" stroke-width="2.5" opacity="0.5"/>
+
+    <!-- Sleeve seam hints -->
+    <line x1="60" y1="200" x2="110" y2="200" stroke="#C8B898" stroke-width="3" opacity="0.3"/>
+    <line x1="390" y1="200" x2="440" y2="200" stroke="#C8B898" stroke-width="3" opacity="0.3"/>
+  </symbol>
+
+  <!-- PJ Shorts symbol -->
+  <symbol id="pj-shorts" viewBox="0 0 450 360">
+    <defs>
+      <filter id="shorts-texture">
+        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+        <feBlend in="SourceGraphic" in2="gray" mode="multiply"/>
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncG type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncB type="linear" slope="0.97" intercept="0.03"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+    <!-- Shorts silhouette: relaxed fit, elastic waistband, two legs -->
+    <path d="
+      M 20,0
+      Q 0,0 0,20
+      L 0,50
+      Q 0,70 20,70
+      L 40,70
+      L 20,340
+      Q 18,355 30,360
+      L 200,360
+      Q 210,358 212,345
+      L 225,180
+      L 238,345
+      Q 240,358 250,360
+      L 420,360
+      Q 432,355 430,340
+      L 410,70
+      L 430,70
+      Q 450,70 450,50
+      L 450,20
+      Q 450,0 430,0
+      Z
+    " fill="var(--garment-color, #FDF8F0)" stroke="#C8B898" stroke-width="2.5" filter="url(#shorts-texture)"/>
+
+    <!-- Elastic waistband -->
+    <rect x="0" y="0" width="450" height="55" rx="8"
+      fill="none" stroke="#C8B898" stroke-width="4" opacity="0.35"/>
+    <!-- Waistband drawstring line -->
+    <path d="M 180,28 Q 225,40 270,28" fill="none" stroke="#C8B898" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+    <!-- Drawstring knot -->
+    <circle cx="225" cy="34" r="4" fill="#C8B898" opacity="0.35"/>
+
+    <!-- Inseam hint (center crotch line) -->
+    <line x1="225" y1="70" x2="225" y2="200" stroke="#C8B898" stroke-width="2" opacity="0.25"/>
+  </symbol>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 1: Cream / Matcha Classic PJ Set                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Pajama Set — All Concepts × Matcha Classic (Cream Garment)</div>
+  <div class="mockup-grid">
+
+    <!-- A — Coquette on PJ set -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#F4F9EF">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-a-matcha-classic.svg" alt="A PJ Top">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#F4F9EF">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic.svg" alt="A PJ Shorts">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette on PJ Set</span>
+        <span class="colorway-name">Matcha Classic · Matcha Cream</span>
+      </div>
+    </div>
+
+    <!-- C — Minimal on PJ set -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#FFF5F7">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic.svg" alt="C PJ Top">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#FFF5F7">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic.svg" alt="C PJ Shorts">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">C — Minimal on PJ Set</span>
+        <span class="colorway-name">Matcha Classic · Blush Cream</span>
+      </div>
+    </div>
+
+    <!-- D — Matcha Party on PJ set (full front print on top) -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#FDE8EE; position:relative;">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <!-- D concept shown as full-front on the top -->
+          <img style="position:absolute;top:12%;left:5%;width:90%;pointer-events:none;" src="../svg/ikemide26-d-pink-cloud.svg" alt="D PJ Top Full">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#FDE8EE">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-pink-cloud.svg" alt="D PJ Shorts icon">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party on PJ Set</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 2: Role Variants on PJ Set                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Role Variants — BRIDE &amp; SQUAD PJ Sets</div>
+  <div class="mockup-grid">
+
+    <!-- BRIDE PJ set -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#FFF5F7">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-a-matcha-classic-bride.svg" alt="Bride PJ Top">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#FFF5F7">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic-bride.svg" alt="Bride PJ Shorts">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">BRIDE ♡ — PJ Set</span>
+        <span class="colorway-name">A + C · Blush Cream</span>
+      </div>
+    </div>
+
+    <!-- SQUAD PJ set — pink cloud -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#E2F0D6">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-a-sage-rose-squad.svg" alt="Squad PJ Top">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#E2F0D6">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-sage-rose.svg" alt="Squad PJ Shorts">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">MATCHA SQUAD — PJ Set</span>
+        <span class="colorway-name">A + C · Sage &amp; Rose</span>
+      </div>
+    </div>
+
+    <!-- D Matcha Classic Bride PJ set -->
+    <div class="mockup-card">
+      <div class="pj-set-wrap">
+        <div class="pj-piece top" style="--garment-color:#FDE8EE; position:relative;">
+          <svg width="160" height="192" viewBox="0 0 500 600"><use href="#pj-top"/></svg>
+          <img style="position:absolute;top:12%;left:5%;width:90%;pointer-events:none;" src="../svg/ikemide26-d-matcha-classic-bride.svg" alt="D Bride PJ Top">
+        </div>
+        <div class="pj-piece shorts" style="--garment-color:#FDE8EE">
+          <svg width="144" height="115" viewBox="0 0 450 360"><use href="#pj-shorts"/></svg>
+          <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic-bride.svg" alt="D Bride PJ Shorts">
+        </div>
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party · BRIDE ♡</span>
+        <span class="colorway-name">Matcha Classic · Blush Pale</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

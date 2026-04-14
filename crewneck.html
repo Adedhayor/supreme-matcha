@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#IkeMide26 — Crewneck Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../palette/tokens.css">
+  <link rel="stylesheet" href="assets/garment-shapes.css">
+  <style>
+    /* Crewneck specific overrides */
+    .garment-wrap.crewneck .design-overlay {
+      top: 24%;
+      width: 58%;
+    }
+    .garment-wrap.crewneck.left-chest .design-overlay {
+      top: 23%;
+      left: 20%;
+      width: 25%;
+    }
+    /* Dark garment card */
+    .mockup-card.dark-garment .card-caption .concept-name { color: #7BA05B; }
+  </style>
+</head>
+<body>
+
+<header class="page-header">
+  <h1>#IkeMide26</h1>
+  <span class="sub">Oversized Crewneck Mockups</span>
+  <a href="index.html" class="back-link">← Lookbook</a>
+</header>
+
+<!-- ── Crewneck SVG symbol ── -->
+<svg style="display:none">
+  <symbol id="crewneck" viewBox="0 0 700 760">
+    <defs>
+      <filter id="cn-texture">
+        <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" stitchTiles="stitch" result="noise"/>
+        <feColorMatrix type="saturate" values="0" in="noise" result="gray"/>
+        <feBlend in="SourceGraphic" in2="gray" mode="multiply"/>
+        <feComponentTransfer>
+          <feFuncR type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncG type="linear" slope="0.97" intercept="0.03"/>
+          <feFuncB type="linear" slope="0.97" intercept="0.03"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+
+    <!-- Crewneck body + sleeves -->
+    <!-- Viewing front: shoulders drop wide (dropped shoulder silhouette), round neckline, ribbed collar, long sleeves reaching ~y=440 -->
+    <path class="garment-fill" d="
+      M 280,30
+      Q 270,0 200,0
+      L 0,90
+      Q 0,120 10,140
+      L 90,240
+      Q 140,240 160,220
+      L 160,740
+      Q 160,760 180,760
+      L 520,760
+      Q 540,760 540,740
+      L 540,220
+      Q 560,240 610,240
+      L 690,140
+      Q 700,120 700,90
+      L 500,0
+      Q 430,0 420,30
+      Q 400,80 350,95
+      Q 300,80 280,30
+      Z
+    " fill="var(--garment-color, #FDF8F0)" stroke="#C8B898" stroke-width="2.5" filter="url(#cn-texture)"/>
+
+    <!-- Ribbed collar band -->
+    <path d="
+      M 280,30
+      Q 300,80 350,95
+      Q 400,80 420,30
+    " fill="none" stroke="#C8B898" stroke-width="16" stroke-linecap="round" opacity="0.4"/>
+    <!-- Collar inner line -->
+    <path d="
+      M 285,38
+      Q 305,82 350,95
+      Q 395,82 415,38
+    " fill="none" stroke="#C8B898" stroke-width="6" stroke-linecap="round" opacity="0.25"/>
+
+    <!-- Cuff ribs at sleeve ends -->
+    <line x1="0" y1="90" x2="90" y2="240" stroke="#C8B898" stroke-width="12" stroke-linecap="round" opacity="0.2"/>
+    <line x1="610" y1="240" x2="700" y2="90" stroke="#C8B898" stroke-width="12" stroke-linecap="round" opacity="0.2"/>
+
+    <!-- Ribbed hem at bottom -->
+    <line x1="160" y1="748" x2="540" y2="748" stroke="#C8B898" stroke-width="10" stroke-linecap="round" opacity="0.3"/>
+    <line x1="160" y1="756" x2="540" y2="756" stroke="#C8B898" stroke-width="6" stroke-linecap="round" opacity="0.2"/>
+
+    <!-- Seam at shoulder drop -->
+    <line x1="160" y1="220" x2="160" y2="248" stroke="#C8B898" stroke-width="3" opacity="0.3"/>
+    <line x1="540" y1="220" x2="540" y2="248" stroke="#C8B898" stroke-width="3" opacity="0.3"/>
+  </symbol>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 1: All Concepts — Front Print (large, centered)    -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Front Print Placement — All Concepts × Matcha Classic Colorway</div>
+  <div class="mockup-grid">
+
+    <!-- Concept A front print -->
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-a-matcha-classic.svg" alt="Concept A — Front Print">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">A — Coquette · Front Print</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <!-- Concept B front print -->
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-matcha-classic.svg" alt="Concept B — Front Print">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">B — Typographic · Front Print</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <!-- Concept C front print -->
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic.svg" alt="Concept C — Front Print">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">C — Minimal · Front Print</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <!-- Concept D front print -->
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-d-matcha-classic.svg" alt="Concept D — Front Print">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">D — Matcha Party · Front Print</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 2: Left Chest Placement — Concept C (Minimal)      -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Left Chest Placement — Concept C (Minimal Mark)</div>
+  <div class="mockup-grid">
+
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck left-chest" style="--garment-color:#FDF8F0">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-c-matcha-classic.svg" alt="Concept C — Left Chest Cream">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">C — Minimal · Left Chest</span>
+        <span class="colorway-name">Matcha Classic · Cream</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck left-chest" style="--garment-color:#E2F0D6">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-c-sage-rose.svg" alt="Concept C — Left Chest Sage">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">C — Minimal · Left Chest</span>
+        <span class="colorway-name">Sage &amp; Rose · Matcha Pale</span>
+      </div>
+    </div>
+
+    <div class="mockup-card">
+      <div class="garment-wrap crewneck left-chest" style="--garment-color:#FDE8EE">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-c-pink-cloud.svg" alt="Concept C — Left Chest Pink">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name">C — Minimal · Left Chest</span>
+        <span class="colorway-name">Pink Cloud · Blush Pale</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ROW 3: Dark Colorway — Midnight Matcha (B & C)         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="mockup-section">
+  <div class="section-label">Midnight Matcha — Dark Garment (Concepts B &amp; C)</div>
+  <div class="mockup-grid">
+
+    <div class="mockup-card dark-garment">
+      <div class="garment-wrap crewneck" style="--garment-color:#3D2B1F">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-midnight-matcha.svg" alt="Concept B — Midnight Matcha">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name" style="color:#7BA05B">B — Typographic · Front Print</span>
+        <span class="colorway-name">Midnight Matcha · Espresso</span>
+      </div>
+    </div>
+
+    <div class="mockup-card dark-garment">
+      <div class="garment-wrap crewneck left-chest" style="--garment-color:#3D2B1F">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-c-midnight-matcha.svg" alt="Concept C — Midnight Matcha">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name" style="color:#7BA05B">C — Minimal · Left Chest</span>
+        <span class="colorway-name">Midnight Matcha · Espresso</span>
+      </div>
+    </div>
+
+    <div class="mockup-card dark-garment">
+      <div class="garment-wrap crewneck" style="--garment-color:#3D2B1F">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-midnight-matcha-bride.svg" alt="Concept B — Midnight Bride">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name" style="color:#7BA05B">B — Typographic · BRIDE ♡</span>
+        <span class="colorway-name">Midnight Matcha · Espresso</span>
+      </div>
+    </div>
+
+    <div class="mockup-card dark-garment">
+      <div class="garment-wrap crewneck" style="--garment-color:#3D2B1F">
+        <svg class="garment-svg" width="280" height="304" viewBox="0 0 700 760"><use href="#crewneck"/></svg>
+        <img class="design-overlay" src="../svg/ikemide26-b-midnight-matcha-squad.svg" alt="Concept B — Midnight Squad">
+      </div>
+      <div class="card-caption">
+        <span class="concept-name" style="color:#7BA05B">B — Typographic · MATCHA SQUAD</span>
+        <span class="colorway-name">Midnight Matcha · Espresso</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>

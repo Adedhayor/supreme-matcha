@@ -1,0 +1,25 @@
+:root {
+  /* ── Matcha Greens ── */
+  --matcha-deep:       #4A6741;   /* Deep ceremonial matcha */
+  --matcha-mid:        #7BA05B;   /* Bright matcha latte green */
+  --matcha-light:      #B6D89C;   /* Soft matcha foam */
+  --matcha-pale:       #E2F0D6;   /* Barely-there matcha tint */
+  --matcha-cream:      #F4F9EF;   /* Matcha milk background */
+
+  /* ── Soft Pinks ── */
+  --blush-deep:        #C27A8E;   /* Rose accent */
+  --blush-mid:         #E8A0B4;   /* Soft pink — primary pink */
+  --blush-light:       #F5CDD8;   /* Light blush */
+  --blush-pale:        #FDE8EE;   /* Barely-there pink */
+  --blush-cream:       #FFF5F7;   /* Pink milk background */
+
+  /* ── Neutrals ── */
+  --cream:             #FDF8F0;   /* Warm off-white (garment base) */
+  --latte:             #D4C5A9;   /* Warm tan / oat milk */
+  --espresso:          #3D2B1F;   /* Deep brown for contrast text */
+  --charcoal:          #2C2C2C;   /* Near-black */
+
+  /* ── Accents ── */
+  --gold-leaf:         #C9A84C;   /* Metallic gold for premium details */
+  --honey:             #E8C547;   /* Bright gold highlight */
+}
