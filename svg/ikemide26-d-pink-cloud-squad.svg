@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Colorway: Pink Cloud -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Jost:wght@300;400;500&amp;display=swap');
+    </style>
+    <!-- Matcha gradient for icons -->
+    <linearGradient id="matchaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6D89C"/>
+      <stop offset="100%" stop-color="#7BA05B"/>
+    </linearGradient>
+    <!-- Mochi gradient -->
+    <radialGradient id="mochiGrad" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#F5CDD8"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </radialGradient>
+    <!-- Ice cream gradient -->
+    <linearGradient id="iceCreamGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B6D89C"/>
+      <stop offset="60%" stop-color="#7BA05B"/>
+      <stop offset="100%" stop-color="#7BA05B"/>
+    </linearGradient>
+    <filter id="sticker">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#3D2B1F" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CONCEPT D — MATCHA PARTY (Playful / Kawaii)         -->
+  <!-- Full front-of-tee print                             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <!-- SECTION 1: Bubble-letter hashtag -->
+  <g id="bubble-hashtag">
+    <!-- Bubble stroke layer (thick, rounded) -->
+    <text
+      x="1500" y="780"
+      font-family="'Abril Fatface', Georgia, serif"
+      font-size="340"
+      fill="none"
+      stroke="#7BA05B"
+      stroke-width="28"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      text-anchor="middle"
+      paint-order="stroke"
+    >#IkeMide26</text>
+    <!-- Fill layer -->
+    <text
+      x="1500" y="780"
+      font-family="'Abril Fatface', Georgia, serif"
+      font-size="340"
+      fill="#B6D89C"
+      text-anchor="middle"
+    >#IkeMide26</text>
+    <!-- Inner highlight -->
+    <text
+      x="1500" y="780"
+      font-family="'Abril Fatface', Georgia, serif"
+      font-size="340"
+      fill="none"
+      stroke="#E2F0D6"
+      stroke-width="4"
+      text-anchor="middle"
+      opacity="0.6"
+    >#IkeMide26</text>
+  </g>
+
+  <!-- SECTION 2: Row of kawaii sticker icons -->
+  <!-- 5 icons spread across: matcha latte, mochi, ice cream, sleeping mask, pillow & slippers -->
+
+  <!-- Icon 1 — Matcha Latte Cup -->
+  <g id="icon-matcha" transform="translate(680, 1150)" filter="url(#sticker)">
+    <!-- Cup body -->
+    <rect x="-70" y="-55" width="140" height="165" rx="14"
+      fill="white" stroke="#3D2B1F" stroke-width="7"/>
+    <!-- Matcha liquid -->
+    <rect x="-62" y="-10" width="124" height="112" rx="8" fill="url(#matchaFill)" clip-path="inset(0 0 0 0 round 8px)"/>
+    <!-- Foam -->
+    <ellipse cx="0" cy="-10" rx="62" ry="14" fill="#FDF8F0"/>
+    <!-- Heart latte art -->
+    <path d="M 0,8 C 0,8 -18,-12 -18,-22 C -18,-32 -6,-36 0,-26 C 6,-36 18,-32 18,-22 C 18,-12 0,8 0,8 Z"
+      fill="#FDF8F0" opacity="0.85"/>
+    <!-- Cup opening -->
+    <ellipse cx="0" cy="-55" rx="70" ry="14"
+      fill="none" stroke="#3D2B1F" stroke-width="6"/>
+    <!-- Handle -->
+    <path d="M 70,10 Q 98,10 98,50 Q 98,90 70,90"
+      fill="none" stroke="#3D2B1F" stroke-width="7" stroke-linecap="round"/>
+    <!-- Saucer -->
+    <ellipse cx="0" cy="112" rx="95" ry="12"
+      fill="#D4C5A9" stroke="#3D2B1F" stroke-width="5"/>
+    <!-- Kawaii face -->
+    <circle cx="-22" cy="55" r="6" fill="#3D2B1F"/>
+    <circle cx="22" cy="55" r="6" fill="#3D2B1F"/>
+    <path d="M -14,72 Q 0,84 14,72" fill="none" stroke="#3D2B1F" stroke-width="4.5" stroke-linecap="round"/>
+    <!-- Blush cheeks -->
+    <ellipse cx="-34" cy="68" rx="10" ry="6" fill="#C9A84C" opacity="0.5"/>
+    <ellipse cx="34" cy="68" rx="10" ry="6" fill="#C9A84C" opacity="0.5"/>
+    <!-- Steam -->
+    <path d="M -20,-75 Q -28,-100 -18,-122" stroke="#B6D89C" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 20,-75 Q 28,-100 18,-122" stroke="#B6D89C" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  </g>
+
+  <!-- Icon 2 — Matcha Mochi -->
+  <g id="icon-mochi" transform="translate(1090, 1140)" filter="url(#sticker)">
+    <!-- Mochi body -->
+    <circle cx="0" cy="0" r="105" fill="url(#mochiGrad)" stroke="#3D2B1F" stroke-width="7"/>
+    <!-- Matcha filling circle -->
+    <circle cx="0" cy="0" r="55" fill="#7BA05B" stroke="#3D2B1F" stroke-width="5"/>
+    <!-- Inner highlight -->
+    <circle cx="-18" cy="-18" r="20" fill="#B6D89C" opacity="0.4"/>
+    <!-- Kawaii face -->
+    <circle cx="-22" cy="8" r="7" fill="#3D2B1F"/>
+    <circle cx="22" cy="8" r="7" fill="#3D2B1F"/>
+    <path d="M -14,26 Q 0,38 14,26" fill="none" stroke="#3D2B1F" stroke-width="5" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="-38" cy="22" rx="12" ry="7" fill="#FDE8EE" opacity="0.7"/>
+    <ellipse cx="38" cy="22" rx="12" ry="7" fill="#FDE8EE" opacity="0.7"/>
+    <!-- Wrapper crinkle at bottom -->
+    <path d="M -105,0 Q -90,35 -65,55 Q -40,75 0,85 Q 40,75 65,55 Q 90,35 105,0"
+      fill="none" stroke="#C9A84C" stroke-width="4" opacity="0.5"/>
+  </g>
+
+  <!-- Icon 3 — Matcha Ice Cream -->
+  <g id="icon-icecream" transform="translate(1500, 1110)" filter="url(#sticker)">
+    <!-- Cone body -->
+    <path d="M -60,60 L 60,60 L 0,240 Z"
+      fill="#D4C5A9" stroke="#3D2B1F" stroke-width="7" stroke-linejoin="round"/>
+    <!-- Cone grid lines -->
+    <line x1="-60" y1="60" x2="0" y2="240" stroke="#B8A88A" stroke-width="3" opacity="0.5"/>
+    <line x1="60" y1="60" x2="0" y2="240" stroke="#B8A88A" stroke-width="3" opacity="0.5"/>
+    <path d="M -50,90 Q 0,95 50,90" stroke="#B8A88A" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M -35,130 Q 0,135 35,130" stroke="#B8A88A" stroke-width="3" fill="none" opacity="0.5"/>
+    <!-- Scoop -->
+    <ellipse cx="0" cy="10" rx="72" ry="60" fill="url(#iceCreamGrad)" stroke="#3D2B1F" stroke-width="7"/>
+    <!-- Top scoop shine -->
+    <ellipse cx="-18" cy="-20" rx="22" ry="16" fill="#B6D89C" opacity="0.35" transform="rotate(-15,-18,-20)"/>
+    <!-- Kawaii face -->
+    <circle cx="-22" cy="18" r="7" fill="#3D2B1F"/>
+    <circle cx="22" cy="18" r="7" fill="#3D2B1F"/>
+    <path d="M -14,36 Q 0,48 14,36" fill="none" stroke="#3D2B1F" stroke-width="5" stroke-linecap="round"/>
+    <!-- Blush -->
+    <ellipse cx="-36" cy="32" rx="12" ry="7" fill="#FDE8EE" opacity="0.65"/>
+    <ellipse cx="36" cy="32" rx="12" ry="7" fill="#FDE8EE" opacity="0.65"/>
+  </g>
+
+  <!-- Icon 4 — Sleeping Mask -->
+  <g id="icon-sleepingmask" transform="translate(1910, 1150)" filter="url(#sticker)">
+    <!-- Mask body ellipse -->
+    <ellipse cx="0" cy="0" rx="115" ry="68"
+      fill="#C9A84C" stroke="#3D2B1F" stroke-width="7"/>
+    <!-- Eye cutouts (rounded rect holes) -->
+    <rect x="-90" y="-28" width="62" height="40" rx="18"
+      fill="white" stroke="#3D2B1F" stroke-width="5"/>
+    <rect x="28" y="-28" width="62" height="40" rx="18"
+      fill="white" stroke="#3D2B1F" stroke-width="5"/>
+    <!-- Mask strap top -->
+    <path d="M -115,0 Q -145,-30 -130,-60" stroke="#C9A84C" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M 115,0 Q 145,-30 130,-60" stroke="#C9A84C" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <!-- Lace dots on mask -->
+    <circle cx="-45" cy="30" r="5" fill="#FDE8EE" opacity="0.7"/>
+    <circle cx="0" cy="38" r="5" fill="#FDE8EE" opacity="0.7"/>
+    <circle cx="45" cy="30" r="5" fill="#FDE8EE" opacity="0.7"/>
+    <!-- ZZZ above mask -->
+    <text x="30" y="-90" font-family="'Jost', sans-serif" font-weight="500" font-size="50"
+      fill="#B6D89C" opacity="0.8">zzz</text>
+  </g>
+
+  <!-- Icon 5 — Pillow + Fuzzy Slippers -->
+  <g id="icon-pillow" transform="translate(2320, 1140)" filter="url(#sticker)">
+    <!-- Pillow body -->
+    <rect x="-95" y="-55" width="190" height="130" rx="40"
+      fill="#FDE8EE" stroke="#3D2B1F" stroke-width="7"/>
+    <!-- Pillow button center -->
+    <circle cx="0" cy="10" r="12" fill="none" stroke="#C9A84C" stroke-width="5"/>
+    <!-- Pillow seam lines (X from center) -->
+    <line x1="-85" y1="-45" x2="-12" y2="6" stroke="#C9A84C" stroke-width="3" opacity="0.4"/>
+    <line x1="85" y1="-45" x2="12" y2="6" stroke="#C9A84C" stroke-width="3" opacity="0.4"/>
+    <line x1="-85" y1="75" x2="-12" y2="14" stroke="#C9A84C" stroke-width="3" opacity="0.4"/>
+    <line x1="85" y1="75" x2="12" y2="14" stroke="#C9A84C" stroke-width="3" opacity="0.4"/>
+    <!-- Slipper left -->
+    <g transform="translate(-45, 108)">
+      <!-- Slipper body -->
+      <ellipse cx="0" cy="0" rx="42" ry="22" fill="#7BA05B" stroke="#3D2B1F" stroke-width="5"/>
+      <!-- Fluffy top band -->
+      <rect x="-34" y="-28" width="68" height="22" rx="11"
+        fill="#B6D89C" stroke="#3D2B1F" stroke-width="5"/>
+    </g>
+    <!-- Slipper right -->
+    <g transform="translate(45, 108)">
+      <ellipse cx="0" cy="0" rx="42" ry="22" fill="#7BA05B" stroke="#3D2B1F" stroke-width="5"/>
+      <rect x="-34" y="-28" width="68" height="22" rx="11"
+        fill="#B6D89C" stroke="#3D2B1F" stroke-width="5"/>
+    </g>
+  </g>
+
+  <!-- SECTION 3: Tagline -->
+  <g id="playful-tagline">
+    <text
+      x="1500" y="1520"
+      font-family="'Jost', sans-serif"
+      font-weight="300"
+      font-size="95"
+      fill="#3D2B1F"
+      text-anchor="middle"
+      letter-spacing="16"
+    >MATCHA SQUAD</text>
+  </g>
+
+  <!-- SECTION 4: Scattered sparkles, hearts, ZZZs -->
+  <g id="scattered-decor">
+    <!-- Sparkles top area -->
+    <polygon points="400,380 410,370 420,380 410,390" fill="#C9A84C" opacity="0.75"/>
+    <polygon points="2600,350 2610,340 2620,350 2610,360" fill="#C9A84C" opacity="0.75"/>
+    <polygon points="780,260 790,250 800,260 790,270" fill="#C9A84C" opacity="0.7"/>
+    <polygon points="2220,280 2230,270 2240,280 2230,290" fill="#C9A84C" opacity="0.7"/>
+    <!-- Four-point stars -->
+    <polygon points="300,600 306,594 312,600 306,606" fill="#C9A84C"/>
+    <polygon points="2700,580 2706,574 2712,580 2706,586" fill="#C9A84C"/>
+    <polygon points="550,480 558,472 566,480 558,488" fill="#C9A84C"/>
+    <polygon points="2450,470 2458,462 2466,470 2458,478" fill="#C9A84C"/>
+
+    <!-- Mini hearts -->
+    <path d="M 360,500 C 360,500 350,488 350,480 C 350,472 362,468 366,476 C 370,468 382,472 382,480 C 382,488 366,500 366,500 Z" fill="#C9A84C" opacity="0.65"/>
+    <path d="M 2640,500 C 2640,500 2630,488 2630,480 C 2630,472 2642,468 2646,476 C 2650,468 2662,472 2662,480 C 2662,488 2646,500 2646,500 Z" fill="#C9A84C" opacity="0.65"/>
+
+    <!-- ZZZ left side -->
+    <text x="340" y="740" font-family="'Jost', sans-serif" font-weight="500" font-size="70"
+      fill="#B6D89C" opacity="0.5" transform="rotate(-15,340,740)">zzz</text>
+    <!-- ZZZ right side -->
+    <text x="2560" y="720" font-family="'Jost', sans-serif" font-weight="500" font-size="70"
+      fill="#B6D89C" opacity="0.5" transform="rotate(15,2560,720)">zzz</text>
+
+    <!-- Bottom scattered sparkles below tagline -->
+    <polygon points="900,1680 908,1672 916,1680 908,1688" fill="#C9A84C" opacity="0.65"/>
+    <polygon points="2100,1680 2108,1672 2116,1680 2108,1688" fill="#C9A84C" opacity="0.65"/>
+    <circle cx="1200" cy="1700" r="6" fill="#C9A84C" opacity="0.55"/>
+    <circle cx="1800" cy="1700" r="6" fill="#C9A84C" opacity="0.55"/>
+    <circle cx="1500" cy="1720" r="5" fill="#C9A84C" opacity="0.45"/>
+
+    <!-- Left side column of dots -->
+    <circle cx="280" cy="1100" r="7" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="270" cy="1220" r="5" fill="#7BA05B" opacity="0.35"/>
+    <circle cx="260" cy="1340" r="7" fill="#C9A84C" opacity="0.4"/>
+    <!-- Right side -->
+    <circle cx="2720" cy="1100" r="7" fill="#C9A84C" opacity="0.4"/>
+    <circle cx="2730" cy="1220" r="5" fill="#7BA05B" opacity="0.35"/>
+    <circle cx="2740" cy="1340" r="7" fill="#C9A84C" opacity="0.4"/>
+  </g>
+
+</svg>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Colorway: Midnight Matcha -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&amp;family=Jost:wght@300;400;500&amp;display=swap');
+    </style>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#3D2B1F" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CONCEPT B1 — STACKED TYPOGRAPHIC LOCKUP             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <!-- SECTION 1: #IkeMide stacked top line -->
+  <g id="hashtag-line1">
+    <!-- Decorative left bracket -->
+    <text x="700" y="1120"
+      font-family="'Playfair Display', Georgia, serif"
+      font-weight="900"
+      font-size="340"
+      fill="#B6D89C"
+      text-anchor="start"
+      opacity="0.18"
+    >⌜</text>
+
+    <text
+      x="1500" y="1100"
+      font-family="'Playfair Display', Georgia, serif"
+      font-weight="900"
+      font-size="320"
+      fill="#B6D89C"
+      text-anchor="middle"
+      letter-spacing="12"
+    >#IkeMide</text>
+  </g>
+
+  <!-- SECTION 2: 26 — oversized -->
+  <g id="number-26">
+    <!-- Shadow layer -->
+    <text x="1508" y="1600"
+      font-family="'Playfair Display', Georgia, serif"
+      font-weight="900"
+      font-size="620"
+      fill="#E2F0D6"
+      text-anchor="middle"
+      letter-spacing="0"
+    >26</text>
+    <!-- Main layer -->
+    <text
+      x="1500" y="1590"
+      font-family="'Playfair Display', Georgia, serif"
+      font-weight="900"
+      font-size="620"
+      fill="#B6D89C"
+      text-anchor="middle"
+      letter-spacing="0"
+    >26</text>
+  </g>
+
+  <!-- SECTION 3: Divider — matcha leaf -->
+  <g id="leaf-divider" transform="translate(1500, 1700)">
+    <!-- Horizontal rules -->
+    <line x1="-420" y1="0" x2="-80" y2="0" stroke="#D4E8C2" stroke-width="3" stroke-linecap="round"/>
+    <line x1="80" y1="0" x2="420" y2="0" stroke="#D4E8C2" stroke-width="3" stroke-linecap="round"/>
+    <!-- Tea leaf center icon -->
+    <g id="tea-leaf-icon">
+      <!-- Leaf body -->
+      <path d="M 0,-48 Q 32,-20 28,8 Q 22,36 0,48 Q -22,36 -28,8 Q -32,-20 0,-48 Z"
+        fill="#D4E8C2"/>
+      <!-- Center vein -->
+      <line x1="0" y1="-40" x2="0" y2="38" stroke="#B6D89C" stroke-width="3" stroke-linecap="round"/>
+      <!-- Side veins -->
+      <path d="M 0,-10 Q 16,0 22,10" stroke="#B6D89C" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M 0,-10 Q -16,0 -22,10" stroke="#B6D89C" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M 0,12 Q 14,20 18,28" stroke="#B6D89C" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+      <path d="M 0,12 Q -14,20 -18,28" stroke="#B6D89C" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+    </g>
+    <!-- Diamond dots flanking leaf -->
+    <polygon points="-75,-6 -68,0 -75,6 -82,0" fill="#F5CDD8"/>
+    <polygon points="75,-6 82,0 75,6 68,0" fill="#F5CDD8"/>
+  </g>
+
+  <!-- SECTION 4: Tagline -->
+  <g id="tagline">
+    <!-- Small heart inline -->
+    <text
+      x="1500" y="1870"
+      font-family="'Jost', sans-serif"
+      font-weight="300"
+      font-size="92"
+      fill="#FDF8F0"
+      text-anchor="middle"
+      letter-spacing="22"
+    >MATCHA SQUAD</text>
+  </g>
+
+  <!-- SECTION 5: Bottom accent line -->
+  <g id="bottom-accent">
+    <line x1="850" y1="1940" x2="2150" y2="1940" stroke="#F5CDD8" stroke-width="2" stroke-linecap="round"/>
+    <!-- Dot accents -->
+    <circle cx="850" cy="1940" r="5" fill="#F5CDD8"/>
+    <circle cx="2150" cy="1940" r="5" fill="#F5CDD8"/>
+    <!-- Center leaf mark repeated small -->
+    <g transform="translate(1500, 1940) scale(0.45)">
+      <path d="M 0,-48 Q 32,-20 28,8 Q 22,36 0,48 Q -22,36 -28,8 Q -32,-20 0,-48 Z" fill="#F5CDD8"/>
+    </g>
+  </g>
+
+  <!-- Corner sparkles -->
+  <polygon points="820,920 828,912 836,920 828,928" fill="#E8C547" opacity="0.7"/>
+  <polygon points="2180,920 2188,912 2196,920 2188,928" fill="#E8C547" opacity="0.7"/>
+  <polygon points="820,1980 828,1972 836,1980 828,1988" fill="#E8C547" opacity="0.7"/>
+  <polygon points="2180,1980 2188,1972 2196,1980 2188,1988" fill="#E8C547" opacity="0.7"/>
+
+</svg>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Colorway: Pink Cloud -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3000 3000" width="3000" height="3000">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&amp;display=swap');
+    </style>
+    <linearGradient id="steamGrad" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#7BA05B" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7BA05B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="iconShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#3D2B1F" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CONCEPT C — MINIMAL MARK                            -->
+  <!-- Total artwork within 600×600px centered zone        -->
+  <!-- Center: 1500, 1500  →  zone: 1200–1800 × 1200–1800 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <g id="minimal-mark" transform="translate(1500, 1460)" filter="url(#iconShadow)">
+
+    <!-- ── Matcha cup icon ── -->
+    <!-- Cup body: rounded rect, centered at 0,0, 180px wide × 220px tall -->
+    <rect x="-90" y="-50" width="180" height="220" rx="18" ry="18"
+      fill="none" stroke="#7BA05B" stroke-width="11" stroke-linejoin="round"/>
+
+    <!-- Cup opening ellipse (top) -->
+    <ellipse cx="0" cy="-50" rx="90" ry="20"
+      fill="none" stroke="#7BA05B" stroke-width="9"/>
+
+    <!-- Matcha fill suggestion (clipped rectangle) -->
+    <rect x="-82" y="-30" width="164" height="100" fill="#7BA05B" opacity="0.15" rx="4"/>
+
+    <!-- Tiny handle on right side -->
+    <path d="M 90,30 Q 128,30 128,80 Q 128,130 90,130"
+      fill="none" stroke="#7BA05B" stroke-width="9" stroke-linecap="round"/>
+
+    <!-- Saucer line at bottom -->
+    <ellipse cx="0" cy="172" rx="120" ry="14"
+      fill="none" stroke="#7BA05B" stroke-width="7" opacity="0.5"/>
+
+    <!-- Steam wisps — two wavy lines -->
+    <path d="M -30,-80 Q -42,-115 -28,-148 Q -14,-180 -28,-210"
+      stroke="url(#steamGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+    <path d="M 30,-80 Q 42,-115 28,-148 Q 14,-180 28,-210"
+      stroke="url(#steamGrad)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  </g>
+
+  <!-- ── Hashtag below icon ── -->
+  <g id="minimal-hashtag">
+    <text
+      x="1500" y="1840"
+      font-family="'Jost', sans-serif"
+      font-weight="500"
+      font-size="88"
+      fill="#3D2B1F"
+      text-anchor="middle"
+      letter-spacing="22"
+    >#IkeMide26</text>
+  </g>
+
+  <!-- ── est. 2026 micro label ── -->
+  <g id="minimal-sub">
+    <!-- Thin rules flanking est. label -->
+    <line x1="1260" y1="1892" x2="1400" y2="1892" stroke="#D4C5A9" stroke-width="2" stroke-linecap="round"/>
+    <line x1="1600" y1="1892" x2="1740" y2="1892" stroke="#D4C5A9" stroke-width="2" stroke-linecap="round"/>
+    <text
+      x="1500" y="1900"
+      font-family="'Jost', sans-serif"
+      font-weight="300"
+      font-size="52"
+      fill="#D4C5A9"
+      text-anchor="middle"
+      letter-spacing="14"
+    >MATCHA SQUAD</text>
+  </g>
+
+</svg>
